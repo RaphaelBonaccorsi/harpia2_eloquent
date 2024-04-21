@@ -1,0 +1,11 @@
+float32 pitch
+float32 roll
+float32 yaw
+float32 pitch_rate
+float32 roll_rate
+float32 yaw_rate
+float32 heading
+float32 ground_speed
+float32 climb_rate
+float32 alt_relative
+float32 throttle
