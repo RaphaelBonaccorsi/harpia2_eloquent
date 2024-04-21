@@ -1,4 +1,0 @@
-UAV uav
-int32 action_id
----
-int32 replan

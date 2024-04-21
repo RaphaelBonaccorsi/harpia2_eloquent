@@ -1,3 +1,0 @@
-float32 user_response
-float32 classifier_time
-float32 action_time

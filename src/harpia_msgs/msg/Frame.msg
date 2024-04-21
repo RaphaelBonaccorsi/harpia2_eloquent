@@ -1,4 +1,0 @@
-int32 type
-float32 weight
-float32 max_velocity
-float32 efficient_velocity
