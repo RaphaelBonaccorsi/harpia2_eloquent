@@ -17,6 +17,7 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(diagnostic_msgs REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 
@@ -52,6 +53,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/RegionPoint.msg"
   "msg/ChangeMission.msg"
   "msg/Mission.msg"
+  "msg/ActionDispatch.msg"
+  "msg/CompletePlan.msg"
  )
 
 ament_package()
