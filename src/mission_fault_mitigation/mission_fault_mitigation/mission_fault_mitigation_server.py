@@ -3,11 +3,11 @@
 
 # Import libraries
 import pyAgrum as gum
-# import sys # Probably useless
+import sys # Probably useless
 import rclpy #ROS2
 from rclpy.node import Node
 from MissionFaultMitigation.srv import *
-# import math # Probably useless
+import math # Probably useless
 # import rosnode, psutil # Probably useless
 # from std_srvs.srv import Empty
 
@@ -21,7 +21,7 @@ from MissionFaultMitigation.srv import *
 
 #from mavros_msgs.msg import *
 #from mavros_msgs.srv import *
-#from sensor_msgs.msg import NavSatFix, Imu, BatteryState
+from sensor_msgs.msg import NavSatFix, Imu, BatteryState
 
 from pylab import *
 import matplotlib.pyplot as plt
