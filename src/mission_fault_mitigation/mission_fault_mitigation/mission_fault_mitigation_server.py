@@ -6,7 +6,8 @@ import pyAgrum as gum
 import sys # Probably useless
 import rclpy #ROS2
 from rclpy.node import Node
-from MissionFaultMitigation.srv import *
+from interfaces.srv import MissionFaultMitigation
+from interfaces.msg import *
 import math # Probably useless
 # import rosnode, psutil # Probably useless
 # from std_srvs.srv import Empty
