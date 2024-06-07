@@ -50,6 +50,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/MissionFaultMitigation.srv"
   "srv/MissionGoalManager.srv"
   "srv/WeatherCheck.srv"
+  "action/MissionPlanner.action"
   DEPENDENCIES geometry_msgs diagnostic_msgs # Add packages that above messages depend on, in this case geometry_msgs for Sphere.msg
 )
 

@@ -17,12 +17,8 @@ import psutil
 from shutil import copyfile
 from itertools import count
 from std_srvs.srv import Empty
-"""
-from rosplan_knowledge_msgs.srv import *
-from rosplan_knowledge_msgs.msg import *
-from rosplan_dispatch_msgs.msg import *
-from rosplan_dispatch_msgs.srv import *
-"""
+
+# Plansys 2 imports
 
 from std_msgs.msg import String
 
@@ -298,10 +294,12 @@ def mission_planning_server():
     This function initializes a ROS node named 'mission_planning_server' and creates a service named 'harpia/mission_planning' of type Empty. The service uses the mission_planning function to handle requests. After the service is created, the function logs a message indicating that the service is ready and then spins the node to keep it running.
 
     """
-    rospy.init_node('mission_planning_server')
-    srv = rospy.Service('harpia/mission_planning', Empty, mission_planning)
-    rospy.loginfo("Mission Planning Ready")
-    srv.spin()
+    rclpy.init()
+    node = rclpy.create_node('mission_planning_server')
+    srv = node.create_service(Empty, 'harpia/mission_planning', mission_planning)
+    node.get_logger().info("Mission Planning Ready")
+    rclpy.spin(node)
+    rclpy.shutdown()
 
 if __name__ == '__main__':
     mission_planning_server()
