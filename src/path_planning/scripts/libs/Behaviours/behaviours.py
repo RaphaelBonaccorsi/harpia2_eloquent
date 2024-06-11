@@ -3,15 +3,15 @@ import pyproj
 from functools import partial
 from shapely.geometry import Point, mapping
 from shapely.ops import transform
-
+"""
 from rosplan_knowledge_msgs.srv import *
 from rosplan_knowledge_msgs.msg import *
 from rosplan_dispatch_msgs.msg import *
 from rosplan_dispatch_msgs.srv import *
-
-from harpia_msgs.msg import *
+"""
+from interfaces.msg import *
 from mavros_msgs.msg import *
-from harpia_msgs.srv import *
+from interfaces.srv import *
 
 
 def pulverize(from_wp):
